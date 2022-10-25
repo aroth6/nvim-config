@@ -90,6 +90,11 @@ _G.packer_plugins = {
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
+  },
   ["vim-airline"] = {
     loaded = true,
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/vim-airline",
