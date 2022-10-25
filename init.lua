@@ -1,7 +1,8 @@
 vim.cmd [[packadd packer.nvim]]
-
 require("config/cmp")
 require("config/lang")
+vim.api.nvim_set_hl(0,"Pmenu", {guibg=None, guifg=white})
+vim.cmd('highlight Pmenu guibg=None guifg=white')
 vim.o.number = true
 vim.o.relativenumber = true
 return require('packer').startup(function(use)
