@@ -1,0 +1,78 @@
+$mod = SUPER
+
+
+# Random keybindings
+bind = $mod, return, exec, kitty
+bind = $mod, q, killactive, 
+bind = $mod SHIFT, SPACE, togglefloating, 
+bind = $mod, d, exec, rofi -show run
+bind = $mod SHIFT, e, exit
+bind = $mod, f, fullscreen
+bind = $mod SHIFT, F, exec, focus
+
+# Move focus
+bind = $mod, h, movefocus, l
+bind = $mod, l, movefocus, r
+bind = $mod, k, movefocus, u
+bind = $mod, j, movefocus, d
+
+bind = $mod SHIFT, H, movewindow, l
+bind = $mod SHIFT, L, movewindow, r
+bind = $mod SHIFT, K, movewindow, u
+bind = $mod SHIFT, J, movewindow, d
+
+
+# Preselect
+bind = $mod, v, layoutmsg, preselect r
+bind = $mod SHIFT, V, layoutmsg, preselect l
+bind = $mod, semicolon, layoutmsg, preselect d
+bind = $mod SHIFT, colon, layoutmsg, preselect d
+
+
+# Switch workspaces
+bind = $mod, 1, workspace, 1
+bind = $mod, 2, workspace, 2
+bind = $mod, 3, workspace, 3
+bind = $mod, 4, workspace, 4
+bind = $mod, 5, workspace, 5
+bind = $mod, 6, workspace, 6
+bind = $mod, 7, workspace, 7
+bind = $mod, 8, workspace, 8
+bind = $mod, 9, workspace, 9
+bind = $mod, 0, workspace, 10
+
+
+# Move active window to a workspace 
+bind = $mod SHIFT, 1, movetoworkspacesilent, 1
+bind = $mod SHIFT, 2, movetoworkspacesilent, 2
+bind = $mod SHIFT, 3, movetoworkspacesilent, 3
+bind = $mod SHIFT, 4, movetoworkspacesilent, 4
+bind = $mod SHIFT, 5, movetoworkspacesilent, 5
+bind = $mod SHIFT, 6, movetoworkspacesilent, 6
+bind = $mod SHIFT, 7, movetoworkspacesilent, 7
+bind = $mod SHIFT, 8, movetoworkspacesilent, 8
+bind = $mod SHIFT, 9, movetoworkspacesilent, 9
+bind = $mod SHIFT, 0, movetoworkspacesilent, 10
+
+
+# Move/resize windows 
+bindm = $mod, mouse:272, movewindow
+bindm = $mod, mouse:273, resizewindow
+
+
+#special workspace / floating windows
+bind = $mod, p, togglespecialworkspace #, focuswindow, class:^(scratchkitty)
+bind = $mod SHIFT, P, exec, [workspace special silent; float; noanim] kitty --class scratchkitty
+bind = $mod SHIFT, UP, resizeactive, exact 1000 600 
+bind = $mod SHIFT, DOWN, movetoworkspacesilent, special
+
+bind = $mod, space, centerwindow
+bind = $mod, up, moveactive, 0 -305 #x y
+bind = $mod, down, moveactive, 0 345 
+bind = $mod, right, moveactive, 638 0 
+bind = $mod, left, moveactive, -638 0 
+
+
+#screenshot
+bind = , print, exec, grimshot copy area
+bind = SHIFT,print, exec, grimshot save area
